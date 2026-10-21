@@ -1,0 +1,16 @@
+# Changes here will be overwritten by Copier; NEVER EDIT MANUALLY
+_commit: 0.17.2
+_src_path: git@github.com:Jezrastudio-genesis/django-blueprint.git
+api_provider: none
+dev_database: local-sqlite3
+prod_database: postgres
+project_description: A simple energy monitor.
+project_name: energy_monitor
+use_celery: false
+use_daisyui: true
+use_dj_health_check: true
+use_django_q2: false
+use_htmx: true
+use_marimo: dev
+use_redis: false
+use_sentry_sdk: false

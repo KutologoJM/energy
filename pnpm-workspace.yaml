@@ -1,0 +1,12 @@
+packages:
+  - "."
+
+nodeVersion: "24.21.0"
+
+allowBuilds:
+  '@parcel/watcher': true
+
+blockExoticSubdeps: true
+
+minimumReleaseAge: 1440
+

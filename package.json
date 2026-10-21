@@ -1,0 +1,43 @@
+{
+	"name": "energy_monitor",
+	"version": "0.0.0",
+	"description": "A simple energy monitor.",
+	"homepage": "project_git_url",
+	"license": "MPL-2.0",
+	"author": {
+		"email": "kutologojm@jezrastudio.co.za",
+		"name": "Kutologo Mashego",
+		"url": "https://bio.jezrastudio.co.za"
+	},
+	"funding": {
+		"type": "buymeacoffee",
+		"url": "https://buymeacoffee.com/kutologojm"
+	},
+	"type": "module",
+	"devEngines": {
+		"runtime": {
+			"name": "node",
+			"version": "24.21.0",
+			"onFail": "warn"
+		},
+		"packageManager": {
+			"name": "pnpm",
+			"version": "12.14.0",
+			"onFail": "warn"
+		}
+	},
+	"scripts": {
+		"build:css": "tailwindcss -i static/css/config.css -o static/css/app.css",
+		"watch:css": "tailwindcss -i static/css/config.css -o static/css/app.css --watch"
+	},
+	"dependencies": {
+		"@tailwindcss/cli": "^4.3.3",
+		"daisyui": "^5.7.50",
+		"tailwindcss": "^4.3.3"
+	},
+	"devDependencies": {
+		"@iconify-json/lucide": "^1.2.146",
+		"@iconify/tailwind4": "^1.2.3"
+	},
+	"_comment_package_manager": "switch to the dedicated packageManager key if facing issues with corepack"
+}
