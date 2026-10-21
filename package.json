@@ -27,8 +27,8 @@
 		}
 	},
 	"scripts": {
-		"build:css": "tailwindcss -i static/css/config.css -o static/css/app.css",
-		"watch:css": "tailwindcss -i static/css/config.css -o static/css/app.css --watch"
+		"build:css": "tailwindcss -i assets/css/config.css -o static/css/app.css",
+		"watch:css": "tailwindcss -i assets/css/config.css -o static/css/app.css --watch"
 	},
 	"dependencies": {
 		"@tailwindcss/cli": "^4.3.3",
