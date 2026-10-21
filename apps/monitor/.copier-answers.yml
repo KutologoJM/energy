@@ -1,0 +1,7 @@
+# Changes here will be overwritten by Copier; NEVER EDIT MANUALLY
+_commit: 0.3.4
+_src_path: git@github.com:Jezrastudio-genesis/django-app-blueprint.git
+app_name: monitor
+include_tests: false
+template_type: web
+use_celery: false
