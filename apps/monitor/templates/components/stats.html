@@ -1,0 +1,28 @@
+<div id="stats" class="stats shadow bg-base-200 border-base-300">
+  <div class="stat">
+    <div class="stat-figure text-primary">
+      <span class="icon-[lucide--plug-zap] size-5"></span>
+    </div>
+    <div class="stat-title">Total consumed</div>
+    <div class="stat-value text-primary">{{ total_consumption }} kWh</div>
+    <div class="stat-desc">{{ total_readings }} total readings</div>
+  </div>
+
+  <div class="stat">
+    <div class="stat-figure text-secondary">
+      <span class="icon-[lucide--gauge] size-5"></span>
+    </div>
+    <div class="stat-title">Latest Reading</div>
+    <div class="stat-value text-secondary">{{ latest_reading.reading }} kWh</div>
+    <div class="stat-desc">{{ lr_date }} * {{ lr_time }}</div>
+  </div>
+
+    <div class="stat">
+    <div class="stat-figure text-success">
+      <span class="icon-[lucide--wallet] size-5"></span>
+    </div>
+    <div class="stat-title">Total Cost</div>
+    <div class="stat-value text-success">₱ {{ total_cost }}</div>
+    <div class="stat-desc">For the month of {{ current_month }}</div>
+  </div>
+</div>

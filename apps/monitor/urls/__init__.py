@@ -20,5 +20,6 @@ Example:
 from django.urls import path
 from apps.monitor import views
 urlpatterns = [
-path("", views.index, name="index")
+path("", views.index, name="index"),
+    path("new-reading", views.process_new_reading)
 ]

@@ -27,3 +27,17 @@ Example:
         def __str__(self):
             return self.title
 """
+from django.db import models
+
+from core.models import TimeStampedModel
+
+
+class Reading(TimeStampedModel):
+    reading = models.DecimalField(max_digits=8, decimal_places=2)
+    recorded_at = models.DateTimeField(unique=True)
+
+    class Meta:
+        ordering = ["-recorded_at"]
+
+    def __str__(self) -> str:
+        return f"Reading: {self.reading} kWh, Date: {self.recorded_at.date()} Time: {self.recorded_at.time()}"

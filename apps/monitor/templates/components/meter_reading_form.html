@@ -1,0 +1,19 @@
+<form
+        hx-post="/new-reading"
+        hx-trigger="submit"
+        hx-target="#stats"
+        hx-swap="outerHTML"
+        class="w-full flex justify-center"
+
+>
+    {% csrf_token %}
+    <fieldset class="fieldset bg-base-200 border-base-300 rounded-box w-xl border p-4">
+        <legend class="fieldset-legend">New Meter Reading</legend>
+        <div class="join">
+            <input name="reading" type="number" step="any" class="input join-item"
+                   placeholder="Previous {{ latest_reading.reading }} kWh"/>
+            <input name="timestamp" type="datetime-local" class="input"/>
+            <button class="btn join-item">save</button>
+        </div>
+    </fieldset>
+</form>
