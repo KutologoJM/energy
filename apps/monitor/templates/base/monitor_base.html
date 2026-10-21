@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" data-theme="space">
+
+<head>
+    <link rel="stylesheet" href="{% static 'css/app.css' %}?{% now 'U' %}">
+    <meta charset="UTF-8">
+    <script src="{% static 'js/htmx4.min.js' %}"></script>
+    <title>
+        {% block head_title %}
+            monitor base
+        {% endblock %}
+    </title>
+    {% block extra_head_element %} {% endblock %}
+</head>
+
+<body>
+<header>
+    {% block header %}
+    {% endblock %}
+</header>
+
+
+{% block main %}
+{% endblock %}
+
+<footer>
+    {% block footer %}
+    {% endblock %}
+</footer>
+</body>
+
+</html>

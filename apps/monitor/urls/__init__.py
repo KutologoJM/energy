@@ -17,3 +17,8 @@ Example:
         path("posts/<slug:slug>/", PostDetailView.as_view(), name="post-detail"),
     ]
 """
+from django.urls import path
+from apps.monitor import views
+urlpatterns = [
+path("", views.index, name="index")
+]

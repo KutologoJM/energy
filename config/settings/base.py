@@ -101,7 +101,7 @@ CONFIG_APPS = [
     "core.apps.CoreConfig",
 ]
 
-LOCAL_APPS = []
+LOCAL_APPS = ["apps.monitor"]
 
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + CONFIG_APPS + LOCAL_APPS
 

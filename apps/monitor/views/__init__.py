@@ -22,3 +22,9 @@ Example:
                 return Response({"detail": str(e)}, status=400)
             return Response(PostOutputSerializer(post).data, status=201)
 """
+from django.shortcuts import render
+
+
+def index(request):
+    context = {}
+    return render(request, "pages/index.html", context=context)
