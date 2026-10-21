@@ -6,6 +6,7 @@ Usage:
 
 Docs: https://docs.djangoproject.com/en/stable/topics/settings/
 """
+
 from .base import *  # noqa: F403
 
 # ==============================================================================
@@ -26,9 +27,9 @@ CSRF_TRUSTED_ORIGINS = env.list("CSRF_TRUSTED_ORIGINS")  # noqa: F405
 
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+    "default": {
+        "ENGINE": "django.db.backends.sqlite3",
+        "NAME": BASE_DIR / "db.sqlite3",
     }
 }
 
@@ -47,11 +48,7 @@ CSRF_COOKIE_SECURE = False
 # APPLICATIONS
 # ==============================================================================
 
-INSTALLED_APPS += [
-    "debug_toolbar",
-    "django_browser_reload",
-    "django_watchfiles"
-]
+INSTALLED_APPS += ["debug_toolbar", "django_browser_reload", "django_watchfiles"]
 
 # ==============================================================================
 # MIDDLEWARE

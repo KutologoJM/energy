@@ -12,12 +12,9 @@ from django.conf import settings
 from health_check.views import HealthCheckView
 
 
-
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path("admin/", admin.site.urls),
     path("", include("core.urls")),
-    
-    
     path(
         f"health/{settings.HEALTH_CHECK_TOKEN}/",
         HealthCheckView.as_view(
@@ -32,23 +29,19 @@ urlpatterns = [
                 "health_check.contrib.psutil.Memory",
                 "health_check.contrib.psutil.Disk",
                 "health_check.contrib.psutil.Temperature",
-
-                
-                
-
                 # "health_check.contrib.atlassian.Cloudflare",
                 # "health_check.contrib.atlassian.Render",
             ]
         ),
     ),
-    
-    
 ]
 
 if settings.DEBUG:
     import debug_toolbar
 
     urlpatterns += [
-        path("__debug__", include(debug_toolbar.urls)),  # This registers the 'djdt' namespace
+        path(
+            "__debug__", include(debug_toolbar.urls)
+        ),  # This registers the 'djdt' namespace
         path("__reload__/", include("django_browser_reload.urls")),
     ]

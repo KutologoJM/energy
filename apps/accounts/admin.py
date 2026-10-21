@@ -6,23 +6,23 @@ from .models import User
 @admin.register(User)
 class UserAdmin(admin.ModelAdmin):
     list_display = (
-        'password',
-        'last_login',
-        'is_superuser',
-        'username',
-        'first_name',
-        'last_name',
-        'email',
-        'is_staff',
-        'is_active',
-        'date_joined',
-        'id',
+        "password",
+        "last_login",
+        "is_superuser",
+        "username",
+        "first_name",
+        "last_name",
+        "email",
+        "is_staff",
+        "is_active",
+        "date_joined",
+        "id",
     )
     list_filter = (
-        'last_login',
-        'is_superuser',
-        'is_staff',
-        'is_active',
-        'date_joined',
+        "last_login",
+        "is_superuser",
+        "is_staff",
+        "is_active",
+        "date_joined",
     )
-    raw_id_fields = ('groups', 'user_permissions')
+    raw_id_fields = ("groups", "user_permissions")
